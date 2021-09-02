@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.2 (Python 3.7.7 on win32)" generated="20210902 13:21:09.733" rpa="false">
+<suite id="s1" name="Browserstack" source="C:\Users\dennypc\eclipse-workspace\browserstack">
+<suite id="s1-s1" name="Browserstack" source="C:\Users\dennypc\eclipse-workspace\browserstack\browserstack.robot">
+<test id="s1-s1-t1" name="testSetupBrowserstack">
+<kw name="Set Variable" library="BuiltIn">
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<arguments>
+<arg>http://${browserstack_userName}:${browserstack_accessKey}@hub.browserstack.com:80/wd/hub</arg>
+</arguments>
+<assign>
+<var>${remoteUrl}</var>
+</assign>
+<msg timestamp="20210902 13:21:10.155" level="INFO">${remoteUrl} = http://dennythree_04ITlG:c7WzMUEqoj9FEMprKsbT@hub.browserstack.com:80/wd/hub</msg>
+<status status="PASS" starttime="20210902 13:21:10.154" endtime="20210902 13:21:10.156"></status>
+</kw>
+<kw name="Create Dictionary" library="BuiltIn">
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<arguments>
+<arg>os=${os}</arg>
+<arg>os_version=${osVersion}</arg>
+<arg>browser=${browser}</arg>
+<arg>browser_version=${browserVersion}</arg>
+</arguments>
+<assign>
+<var>&amp;{desiredCapabilities}</var>
+</assign>
+<msg timestamp="20210902 13:21:10.159" level="INFO">&amp;{desiredCapabilities} = { os=windows | os_version=10 | browser=chrome | browser_version=92.0 }</msg>
+<status status="PASS" starttime="20210902 13:21:10.156" endtime="20210902 13:21:10.159"></status>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>${baseUrl}</arg>
+<arg>remote_url=${remoteUrl}</arg>
+<arg>desired_capabilities=${desiredCapabilities}</arg>
+</arguments>
+<msg timestamp="20210902 13:21:10.160" level="INFO">Opening browser 'firefox' to base url 'https://www.google.com/' through remote server at 'http://dennythree_04ITlG:c7WzMUEqoj9FEMprKsbT@hub.browserstack.com:80/wd/hub'.</msg>
+<status status="PASS" starttime="20210902 13:21:10.159" endtime="20210902 13:21:19.509"></status>
+</kw>
+<status status="PASS" starttime="20210902 13:21:10.152" endtime="20210902 13:21:19.511" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20210902 13:21:09.871" endtime="20210902 13:21:19.520"></status>
+</suite>
+<status status="PASS" starttime="20210902 13:21:09.833" endtime="20210902 13:21:19.535"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Browserstack">Browserstack</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Browserstack">Browserstack.Browserstack</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
