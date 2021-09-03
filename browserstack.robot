@@ -8,8 +8,8 @@ ${os}                          windows
 ${osVersion}                   10
 ${browser}                     chrome
 ${browserVersion}              92.0
-${browserstack_userName}       dennythree_04ITlG
-${browserstack_accessKey}      c7WzMUEqoj9FEMprKsbT
+${browserstack_userName}       yourUserName
+${browserstack_accessKey}      yourUserAccessKey
 
 *** Test Cases ***
 testSetupBrowserstack
